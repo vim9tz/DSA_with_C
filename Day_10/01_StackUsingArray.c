@@ -34,7 +34,7 @@ void peek() {
     printf("Top element is %d\n", stack[top]);
 }
 
-// https://github.com/vim9tz/DSA_with_C
+
 
 /* Display stack */
 void display() {
