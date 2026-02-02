@@ -56,7 +56,7 @@ int isBalanced(char exp[])
 
 int main()
 {
-    char exp[] = "{[()]}";
+    char exp[] = ")[[(a + b)}]}";
 
     if (isBalanced(exp))
         printf("Balanced\n");
