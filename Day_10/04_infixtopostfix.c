@@ -1,3 +1,26 @@
+// (A + B) * (C - D / E) ^ F (INFIX → POSTFIX)
+
+// Postfix = AB+CDE/-F^*
+// Prefix = ^*+AB-C/DEF
+
+// Rules
+// 1. Operand        → Output immediately
+// 2. (              → Push to stack
+// 3. )              → Pop from stack to output
+//                     until ( is found, then remove (
+// 4. Operator       →
+//     a) If stack is empty → Push operator
+//     b) If incoming operator has
+//        HIGHER precedence than stack top
+//        → Push operator
+//     c) If incoming operator has
+//        LOWER OR EQUAL precedence than stack top
+//        → Pop stack top to output
+//          (repeat until lower precedence)
+//        → Then push incoming operator
+// 5. End of expression →
+//    Pop all remaining operators from stack to output
+
 #include <stdio.h>
 #include <ctype.h>
 
